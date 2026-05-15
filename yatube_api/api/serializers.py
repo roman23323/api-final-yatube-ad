@@ -5,9 +5,9 @@ from rest_framework.relations import SlugRelatedField
 from posts.models import Comment, Post
 from django.contrib.auth import get_user_model
 from posts.models import Follow
+from posts.models import Group
 
 User = get_user_model()
-from posts.models import Group
 
 
 class PostSerializer(serializers.ModelSerializer):
