@@ -1,6 +1,11 @@
 from rest_framework import generics, permissions, filters, viewsets
 from posts.models import Follow, Post, Comment, Group
-from .serializers import FollowSerializer, PostSerializer, CommentSerializer, GroupSerializer
+from .serializers import (
+    FollowSerializer,
+    PostSerializer,
+    CommentSerializer,
+    GroupSerializer
+)
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 
