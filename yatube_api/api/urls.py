@@ -26,14 +26,14 @@ urlpatterns = [
         path('', include('djoser.urls.jwt')),
         path('follow/', FollowListCreateView.as_view()),
         path('posts/<int:post_id>/comments/',
-            CommentViewSet.as_view({'get': 'list', 'post': 'create'})),
+             CommentViewSet.as_view({'get': 'list', 'post': 'create'})),
         path('posts/<int:post_id>/comments/<int:pk>/',
-            CommentViewSet.as_view({
-                'get': 'retrieve',
-                'put': 'update',
-                'patch': 'partial_update',
-                'delete': 'destroy'
-            })),
+             CommentViewSet.as_view({
+                 'get': 'retrieve',
+                 'put': 'update',
+                 'patch': 'partial_update',
+                 'delete': 'destroy'
+             })),
         path('', include(router.urls)),
     ])),
 ]
